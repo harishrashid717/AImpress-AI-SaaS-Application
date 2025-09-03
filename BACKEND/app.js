@@ -10,11 +10,20 @@ import userRouter from "./routes/userRouter.js";
 
 const app = express();
 
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
+
 app.use(cors({
-  origin: process.env.CORS_ORIGIN, 
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like Postman) or if origin is in allowed list
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('CORS policy does not allow access from this origin.'), false);
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true 
+  credentials: true
 }));
+
 
 //  connectCloudinary();
 // Middleware
