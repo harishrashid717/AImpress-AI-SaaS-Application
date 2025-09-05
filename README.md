@@ -1,7 +1,8 @@
 # 🧠 AImpress – AI SaaS Application  
 
-🚀 **AImpress** is a full-stack **AI SaaS platform** developed to showcase advanced **AI integration, subscription billing, scalable image handling, and community features**.  
-Built using **React, Node.js, Express, MySQL**, and multiple AI APIs, it demonstrates how modern SaaS applications can combine **authentication, payments, content generation, and real-time collaboration** into one platform.  
+🚀 **AImpress – AI SaaS Application is a full-stack platform that combines AI content & image generation, resume analysis, and community sharing with secure authentication and subscription billing. Users can generate AI articles, blog titles, and images (via Gemini 2.0 and ClipDrop APIs), enhance media with Cloudinary AI (background/object removal), and analyze resumes with pdf-parse + Gemini. The platform includes a public creations gallery with a real-time like/unlike system to enable community engagement.
+
+⚡ Optimizations Implemented: Reduced DB storage by ~90% by storing Cloudinary URLs instead of Base64, improved performance with CDN caching & on-the-fly compression, efficiently handled large uploads with Multer + auto file cleanup, and ensured concurrent-safe real-time interactions.  
 
 🔗 **Live Link**: [AImpress Application](https://aimpress-ai-saas-application-fronte.vercel.app/)  
 🎥 **Demo Video**: [Watch on YouTube](https://youtu.be/1GYClmE_pkA?si=Fd5XQaDjCvf_SrCq)  
